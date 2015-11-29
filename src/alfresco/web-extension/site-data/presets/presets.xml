@@ -1,0 +1,134 @@
+<presets>
+	<preset id="21st-site-preset">
+		<components>
+			<!-- title -->
+			<component>
+				<scope>page</scope>
+				<region-id>title</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/title/collaboration-title</url>
+			</component>
+			<!-- navigation -->
+			<component>
+				<scope>page</scope>
+				<region-id>navigation</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/navigation/collaboration-navigation</url>
+			</component>
+			<!-- dashboard components (welcome block) -->
+			<!-- component> <scope>page</scope> <region-id>full-width-dashlet</region-id> 
+				<source-id>site/${siteid}/dashboard</source-id> <url>/components/dashlets/dynamic-welcome</url> 
+				<properties> <dashboardType>site</dashboardType> </properties> </component -->
+			<!-- 1st column -->				
+			<component>
+				<scope>page</scope>
+				<region-id>component-1-1</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/activityfeed</url>
+			</component>
+			<component>
+				<scope>page</scope>
+				<region-id>component-1-2</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/site-links</url>
+			</component>		
+			<component>
+				<scope>page</scope>
+				<region-id>component-1-3</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/site-datalists</url>
+			</component>					
+			<component>
+				<scope>page</scope>
+				<region-id>component-1-4</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/colleagues</url>
+				<properties>
+					<height>504</height>
+				</properties>
+			</component>
+			<!-- 2nd column -->
+			<component>
+				<scope>page</scope>
+				<region-id>component-2-1</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/forum-summary</url>
+				<properties>
+					<height>553</height>
+				</properties>				
+			</component>
+			<component>
+				<scope>page</scope>
+				<region-id>component-2-2</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/webview</url>
+				<properties>
+					<height>603</height>
+					<webviewTitle>21st DBI</webviewTitle>
+					<webviewURI>http://dbiweb.sfgov.org/dbipts/default.aspx?page=AddressData2&amp;AddressID=371355</webviewURI>
+				</properties>					
+			</component>
+			<component>
+				<scope>page</scope>
+				<region-id>component-2-3</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/rssfeed</url>
+				<properties>
+					<limit>5</limit>
+					<feedurl>http://feeds.feedburner.com/preservationnation</feedurl>
+					<height>686</height>
+					<target>_self</target>			
+				</properties>					
+			</component>		
+			<!-- 3d column -->											
+			<component>
+				<scope>page</scope>
+				<region-id>component-3-1</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/project-list</url>
+				<properties>
+					<height>59</height>
+				</properties>				
+			</component>
+			<component>
+				<scope>page</scope>
+				<region-id>component-3-2</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/calendar</url>
+				<properties>
+					<height>74</height>
+				</properties>				
+			</component>			
+			<component>
+				<scope>page</scope>
+				<region-id>component-3-3</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/imagesummary</url>
+				<properties>
+					<height>539</height>
+				</properties>				
+			</component>	
+		</components>
+		<pages>
+			<page id="site/${siteid}/dashboard">
+				<title>SFDB Site Dashboard</title>
+				<description>SFDB Collaboration site's dashboard page</description>
+				<template-instance>dashboard-3-columns</template-instance>
+				<authentication>user</authentication>
+				<properties>
+					<sitePages>[{"pageId":"documentlibrary"}, {"pageId":"project-list"}, 
+						{"pageId":"calendar"},  {"pageId":"discussions-topiclist"}, 
+						{"pageId":"data-lists"}, {"pageId":"blog-postlist"}, {"pageId":"links"}
+						<!-- site members are automatically added -->
+						]</sitePages>
+				</properties>
+               <pageMetadata>
+   					{
+   					"documentlibrary":{"titleId":"page.projectDocumentLibrary.title", "descriptionId":"page.projectDocumentLibrary.description", "type":"projectManagement"},
+   					"project-list":{"titleId":"page.projectProjectList.title", "descriptionId":"page.projectProjectList.description", "type":"projectManagement"}
+   					}
+               </pageMetadata>				
+			</page>
+		</pages>
+	</preset>
+</presets>

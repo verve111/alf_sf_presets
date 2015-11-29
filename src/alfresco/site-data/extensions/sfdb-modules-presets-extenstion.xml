@@ -1,0 +1,15 @@
+<extension>
+  <modules>
+	<module>
+		<id>Custom site presets</id>
+		<version>1.0</version>
+		<auto-deploy>true</auto-deploy>
+		<customizations>
+			<customization>
+				<targetPackageRoot>org.alfresco.modules</targetPackageRoot>
+				<sourcePackageRoot>custom-presets</sourcePackageRoot>
+			</customization>
+		</customizations>
+	</module>   
+  </modules>	
+</extension>
