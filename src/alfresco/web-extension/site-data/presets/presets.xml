@@ -65,7 +65,7 @@
 				<properties>
 					<height>603</height>
 					<webviewTitle>21st DBI</webviewTitle>
-					<webviewURI>http://dbiweb.sfgov.org/dbipts/default.aspx?page=AddressData2&amp;AddressID=371355</webviewURI>
+					<webviewURI>http://dbiweb.sfgov.org/dbipts/</webviewURI>
 				</properties>					
 			</component>
 			<component>
@@ -75,7 +75,7 @@
 				<url>/components/dashlets/rssfeed</url>
 				<properties>
 					<limit>5</limit>
-					<feedurl>http://feeds.feedburner.com/preservationnation</feedurl>
+					<feedurl>http://www.houzz.com/getQuestions//location=us/out-rss</feedurl>
 					<height>686</height>
 					<target>_self</target>			
 				</properties>					
