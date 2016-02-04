@@ -19,13 +19,25 @@
 			<!-- component> <scope>page</scope> <region-id>full-width-dashlet</region-id> 
 				<source-id>site/${siteid}/dashboard</source-id> <url>/components/dashlets/dynamic-welcome</url> 
 				<properties> <dashboardType>site</dashboardType> </properties> </component -->
-			<!-- 1st column -->				
+			<!-- 1st column -->		
 			<component>
 				<scope>page</scope>
 				<region-id>component-1-1</region-id>
 				<source-id>site/${siteid}/dashboard</source-id>
+				<url>/components/dashlets/rssfeed</url>
+				<properties>
+					<limit>5</limit>
+					<feedurl>http://sfdbweb.com:8080/share/feedservice/components/discussions/rss?site=${siteid}</feedurl>
+					<height>336</height>
+					<target>_self</target>			
+				</properties>					
+			</component>						
+			<!-- component>
+				<scope>page</scope>
+				<region-id>component-1-1</region-id>
+				<source-id>site/${siteid}/dashboard</source-id>
 				<url>/components/dashlets/activityfeed</url>
-			</component>
+			</component-->
 			<component>
 				<scope>page</scope>
 				<region-id>component-1-2</region-id>
@@ -38,7 +50,7 @@
 				<source-id>site/${siteid}/dashboard</source-id>
 				<url>/components/dashlets/site-datalists</url>
 			</component>					
-			<component>
+			<!-- component>
 				<scope>page</scope>
 				<region-id>component-1-4</region-id>
 				<source-id>site/${siteid}/dashboard</source-id>
@@ -46,7 +58,8 @@
 				<properties>
 					<height>504</height>
 				</properties>
-			</component>
+			</component-->
+			
 			<!-- 2nd column -->
 			<component>
 				<scope>page</scope>
@@ -54,32 +67,30 @@
 				<source-id>site/${siteid}/dashboard</source-id>
 				<url>/components/dashlets/forum-summary</url>
 				<properties>
-					<height>553</height>
+					<height>187</height>
 				</properties>				
 			</component>
 			<component>
 				<scope>page</scope>
 				<region-id>component-2-2</region-id>
 				<source-id>site/${siteid}/dashboard</source-id>
-				<url>/components/dashlets/webview</url>
-				<properties>
-					<height>603</height>
-					<webviewTitle>21st DBI</webviewTitle>
-					<webviewURI>http://dbiweb.sfgov.org/dbipts/</webviewURI>
-				</properties>					
-			</component>
+				<url>/components/dashlets/imagesummary</url>
+				<!-- properties>
+					<height>539</height>
+				</properties-->				
+			</component>			
 			<component>
 				<scope>page</scope>
 				<region-id>component-2-3</region-id>
 				<source-id>site/${siteid}/dashboard</source-id>
-				<url>/components/dashlets/rssfeed</url>
+				<url>/components/dashlets/webview</url>
 				<properties>
-					<limit>5</limit>
-					<feedurl>http://www.houzz.com/getQuestions//location=us/out-rss</feedurl>
-					<height>686</height>
-					<target>_self</target>			
+					<height>428</height>
+					<!-- webviewTitle>21st DBI</webviewTitle>
+					<webviewURI>http://dbiweb.sfgov.org/dbipts/</webviewURI-->
 				</properties>					
-			</component>		
+			</component>
+	
 			<!-- 3d column -->											
 			<component>
 				<scope>page</scope>
@@ -87,7 +98,7 @@
 				<source-id>site/${siteid}/dashboard</source-id>
 				<url>/components/dashlets/project-list</url>
 				<properties>
-					<height>59</height>
+					<height>136</height>
 				</properties>				
 			</component>
 			<component>
@@ -98,16 +109,16 @@
 				<properties>
 					<height>74</height>
 				</properties>				
-			</component>			
+			</component>
 			<component>
 				<scope>page</scope>
 				<region-id>component-3-3</region-id>
 				<source-id>site/${siteid}/dashboard</source-id>
-				<url>/components/dashlets/imagesummary</url>
+				<url>/components/dashlets/site-search</url>
 				<properties>
-					<height>539</height>
+					<height>74</height>
 				</properties>				
-			</component>	
+			</component>
 		</components>
 		<pages>
 			<page id="site/${siteid}/dashboard">
@@ -116,9 +127,10 @@
 				<template-instance>dashboard-3-columns</template-instance>
 				<authentication>user</authentication>
 				<properties>
-					<sitePages>[{"pageId":"documentlibrary"}, {"pageId":"project-list"}, 
-						{"pageId":"calendar"},  {"pageId":"discussions-topiclist"}, 
-						{"pageId":"data-lists"}, {"pageId":"blog-postlist"}, {"pageId":"links"}
+					<sitePages>[{"pageId":"documentlibrary"},  
+						{"pageId":"discussions-topiclist"}, {"pageId":"calendar"},
+						{"pageId":"project-list"}, 
+						{"pageId":"data-lists"}, <!-- {"pageId":"blog-postlist"},--> {"pageId":"links"}
 						<!-- site members are automatically added -->
 						]</sitePages>
 				</properties>
