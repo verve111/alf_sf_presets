@@ -27,7 +27,7 @@
 				<url>/components/dashlets/rssfeed</url>
 				<properties>
 					<limit>5</limit>
-					<feedurl>http://sfdbweb.com:8080/share/feedservice/components/discussions/rss?site=${siteid}</feedurl>
+					<feedurl>https://sfdbweb.com/share/feedservice/components/discussions/rss?site=${siteid}</feedurl>
 					<height>336</height>
 					<target>_self</target>			
 				</properties>					
